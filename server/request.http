@@ -1,0 +1,35 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "jim",
+  "password": "jim"
+}
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "jim",
+  "password": "jim"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3OWVhYWU2ZjU2MzAwNzQzMTQ5ZmEiLCJpYXQiOjE2MzczMjY1Mzh9._Y_Qa0Sz8y_doqM3XHExfJqTeXbtEBmEAfpfN7j9oGw
+
+{
+  "title": "React",
+  "description": "React",
+  "url": "react.com",
+  "status": "TO LEARN"
+}
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3OWVhYWU2ZjU2MzAwNzQzMTQ5ZmEiLCJpYXQiOjE2MzczMjY1Mzh9._Y_Qa0Sz8y_doqM3XHExfJqTeXbtEBmEAfpfN7j9oGw
+
+###
+DELETE http://localhost:5000/api/posts/61979fa1e6f56300743149fd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3OWVhYWU2ZjU2MzAwNzQzMTQ5ZmEiLCJpYXQiOjE2MzczMjY1Mzh9._Y_Qa0Sz8y_doqM3XHExfJqTeXbtEBmEAfpfN7j9oGw
